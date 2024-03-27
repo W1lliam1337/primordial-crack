@@ -32,7 +32,8 @@ namespace dmpr::segment {
                                            [[maybe_unused]] int a2,
                                            [[maybe_unused]] void* a3,
                                            [[maybe_unused]] int a4 ) {
-        utils::g_logger->info( "Patching memodrial icon..." );
+        static std::once_flag flag{ };
+        std::call_once( flag, [ = ] { utils::g_logger->info( "Patching memordial icon..." ); } );
         return nullptr;
     }
 
