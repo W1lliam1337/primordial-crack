@@ -3,7 +3,7 @@
 #include "../../../utils/logger/logger.hxx"
 #include "../native/native.hxx"
 
-#include <minhook/MinHook.h>
+#include <minhook/minhook.hxx>
 
 // clang-format off
 #include <winsock.h>

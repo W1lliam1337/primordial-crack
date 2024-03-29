@@ -69,6 +69,7 @@
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <CallingConvention>FastCall</CallingConvention>
+      <ControlFlowGuard>Guard</ControlFlowGuard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -90,6 +91,7 @@
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <CallingConvention>FastCall</CallingConvention>
+      <ControlFlowGuard>Guard</ControlFlowGuard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -100,24 +102,33 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="deps\minhook\buffer.cxx" />
+    <ClCompile Include="deps\minhook\hde\hde32.cxx" />
+    <ClCompile Include="deps\minhook\hde\hde64.cxx" />
+    <ClCompile Include="deps\minhook\hook.cxx" />
+    <ClCompile Include="deps\minhook\trampoline.cxx" />
     <ClCompile Include="src\core\segment\hooks\hooks.cxx" />
     <ClCompile Include="src\core\segment\reviver\reviver.cxx" />
     <ClCompile Include="src\bootstrap.cxx" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="deps\minhook\buffer.hxx" />
+    <ClInclude Include="deps\minhook\hde\hde32.hxx" />
+    <ClInclude Include="deps\minhook\hde\hde64.hxx" />
+    <ClInclude Include="deps\minhook\hde\pstdint.hxx" />
+    <ClInclude Include="deps\minhook\hde\table32.hxx" />
+    <ClInclude Include="deps\minhook\hde\table64.hxx" />
+    <ClInclude Include="deps\minhook\minhook.hxx" />
+    <ClInclude Include="deps\minhook\trampoline.hxx" />
     <ClInclude Include="src\core\segment\hooks\hooks.hxx" />
     <ClInclude Include="src\core\segment\native\native.hxx" />
     <ClInclude Include="src\core\segment\native\data\network.hxx" />
     <ClInclude Include="src\core\segment\native\data\oep.hxx" />
     <ClInclude Include="src\core\segment\reviver\reviver.hxx" />
     <ClInclude Include="src\core\context\context.hxx" />
-    <ClInclude Include="deps\minhook\MinHook.h" />
     <ClInclude Include="src\core\segment\native\data\iat.hxx" />
     <ClInclude Include="src\utils\logger\logger.hxx" />
     <ClInclude Include="src\common.hxx" />
-  </ItemGroup>
-  <ItemGroup>
-    <Library Include="deps\minhook\MinHook.lib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="src\core\context\context.inl" />
